@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="icon" type="image/png" href="{{ url_for('static',filename='img/valve.png') }}" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">	
+	</head>
+
+{% block content %}
+<body>
+	
+	<!-- <div class="background">
+		<img class="" src="{{ url_for('static',filename='img/background_home.svg') }}" alt="">
+	</div> -->
+
+	<div class="wrapper">
+		<div id="rowBanner">
+			<div class="banner d-flex justify-content-between">
+				<a href="/">
+					<input type='image' class="logo" href="/" src="{{ url_for('static',filename='img/Aptar.png') }}" alt="">
+				</a>
+				<h5 class="display-2">TOP iCQA</h5>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8 text-center" id="left">
+				<div class="input-group mb-3">
+					<style type="text/css">
+						.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+						.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+						.tftable tr {background-color:#d4e3e5;}
+						.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+						.tftable tr:hover {background-color:#ffffff;}
+						</style>
+						
+						<table class="tftable" border="1">
+						<tr><th>Component</th><th>Material code</th><th>Analyte</th><th>Low spec</th><th>High spec</th></tr>
+						
+						<tr><td>VALVE-DF31-50---PRE1 A--</td><td>10055073</td><td>Moy Concentration</td><td>0.2</td><td>1.0</td></tr>
+=						
+						<tr><td>SPRING-DF30-DF60-RETURN-INOX---|VALVE-DF31-50---PRE1 A--</td><td>10080949</td><td>B11 - Charge P1</td><td>1400</td><td>1600</td></tr>
+						<tr><td>SPRING-DF30-DF60-RETURN-INOX---|VALVE-DF31-50---PRE1 A--</td><td>10080949</td><td>B12 - Charge P1</td><td>2550</td><td>2850</td></tr>
+						<tr><td>SPRING-DF30-DF60-RETURN-INOX---|VALVE-DF31-50---PRE1 A--</td><td>10080949</td><td>D02 - Ø ext spires - extrême</td><td>NA</td><td>4.82</td></tr>
+						
+						<tr><td>GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A--</td><td>10054944</td><td>CpK Diamètre interne</td><td>1.33</td><td>NA</td></tr>
+						<tr><td>GASKET-P-403E-7,40-1,00-W1-S1-RND-|VALVE-DF31-50---PRE1 A--</td><td>10055021</td><td>CpK Diamètre interne</td><td>1.33</td><td>NA</td></tr>						
+						<tr><td>GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A--</td><td>10054945</td><td>CpK Diamètre externe</td><td>1.33</td><td>NA</td></tr>
+						<tr><td>GASKET-P-403E-7,40-1,00-W1-S1-RND-|VALVE-DF31-50---PRE1 A--</td><td>10055021</td><td>CpK Diamètre externe</td><td>1.33</td><td>NA</td></tr>
+						<tr><td>GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A--</td><td>10054945</td><td>CpK Diamètre interne</td><td>1.33</td><td>NA</td></tr>
+						<tr><td>GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A--</td><td>10054944</td><td>CpK Diamètre externe</td><td>1.33</td><td>NA</td></tr>
+						</table>				
+				</div>
+			</div>
+
+			<div class="col-1"></div>
+				
+		</div>
+	</div>
+
+</body>
+</html>
+{% endblock %}

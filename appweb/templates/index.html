@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="icon" type="image/png" href="{{ url_for('static',filename='img/valve.png') }}" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">	
+	</head>
+
+{% block content %}
+
+<body>
+	
+	<!-- <div class="background">
+		<img class="" src="{{ url_for('static',filename='img/background_home.svg') }}" alt="">
+	</div> -->
+
+	<div class="wrapper">
+		<div id="rowBanner">
+			<div class="banner d-flex justify-content-between">
+				<a href="/">
+					<input type='image' class="logo" href="/" src="{{ url_for('static',filename='img/Aptar.png') }}" alt="Aptar">
+				</a>
+
+				<h5 class="display-4 text-black">side streaming max</h5>
+
+				<!-- <input type='image' class="logo" src="{{ url_for('static',filename='img/logoAptar.png') }}" style="width: 300px"  alt=""> -->
+
+			</div>
+
+		</div>
+		
+		<div class="row">
+			<div class="col-1 text-center" id="left">
+				<!-- <img class="img" src="{{ url_for('static',filename='img/valve.png') }}" height="500" width="100" id='camera'> height="470" width="670" -->
+			</div>	
+
+			<div class="col-1 text-center" id="left">
+				<img class="" src="{{ url_for('static',filename='img/poumon.png') }}" alt="">
+				<img class="" src="{{ url_for('static',filename='img/nez.png') }}" alt="">
+			</div>	
+			
+			<div class="col-2 text-center" id="left">
+			</div>
+				
+			<div class="col-4 text-center buttons" id="right">
+				 <!--onclick='document.location.reload(false)'-->	
+				 <div></div>
+				<form  method="POST" action="{{url_for('startPrediction')}}">
+					<button id='makePrediction' name="makePrediction" class='btn btn-info btn-lg' style="width: 300px" >START PREDICTION</button>
+				</form>
+
+				<form  method="POST" action="{{url_for('getInformations')}}">
+					<button id='getInfos' name="getInfos" class='btn btn-info btn-lg' style="width: 300px">GET INFORMATIONS</button>
+				</form>
+
+				<form  method="POST" action="{{url_for('topIcqa')}}">
+					<button id='topIcqa' name="topIcqa" class='btn btn-info btn-lg' style="width: 300px">TOP ICQA</button>
+				</form>
+
+				<div></div><div></div>
+			</div>	
+
+			
+
+			<div class="col-3 text-center" id="left">
+				<img class="img" src="{{ url_for('static',filename='img/valve.png') }}" height="500" width="100" id='camera'> <!-- height="470" width="670" -->
+			</div>	
+
+
+		</div>
+	</div>
+
+</body>
+</html>
+{% endblock %}

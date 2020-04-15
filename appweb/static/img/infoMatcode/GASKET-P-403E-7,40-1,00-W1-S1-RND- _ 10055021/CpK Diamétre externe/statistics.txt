@@ -1,0 +1,19 @@
+
+Number of material tested          : 98
+Number of batch tested             : 98
+
+Minimum value of tests             : 0.88
+Maximum value of tests             : 4.28
+Mean value of tests                : 2.317
+Standard deviation                 : 0.592
+
+Lower specification                : 1.33
+Higher specification               : nan
+Estimated lower specification      : 0.695
+Estimated higher specification     : 3.935
+
+Lower limit (mean-5*std)           : -0.643
+Higher limit (mean+5*std)          : 5.277
+Number of outliers (mean +- 5std)  : 0.0
+Rate of outliers (mean +- 5std)    : 0.0 % 
+Mean value without outliers        : 2.317

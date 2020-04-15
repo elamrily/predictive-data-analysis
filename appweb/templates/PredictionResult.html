@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="icon" type="image/png" href="{{ url_for('static',filename='img/valve.png') }}" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">	
+	</head>
+
+{% block content %}
+<body>
+	
+	<div class="wrapper">
+		<div id="rowBanner">
+			
+			<div class="banner d-flex justify-content-between">
+				<a href="/">
+					<input type='image' class="logo" href="/" src="{{ url_for('static',filename='img/Aptar.png') }}" alt="">
+				</a>
+
+				<h1 class="text-center">Let's predict the side streaming max</h1>
+				
+			</div>
+		</div>
+
+		<form  method="POST" action="{{url_for('prediction')}}">
+
+			<div class="row">
+				<div class="col-2" id="left"></div>
+				
+				<div class="col-2 text-center" id="left">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="VALVE-DF31-50---PRE1 A-- : 1 dose individuelle (maxi)">Test 01</span>
+						</div>
+						<input type="text" class="form-control" value=75.17 name="X49" id="X49">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="VALVE-DF31-50---PRE1 A-- : Conc Max">Test 02</span>
+						</div>
+						<input type="text" class="form-control" value=0.656 name="X169" id="X169">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-403E-7,40-1,00-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : CpK Diamètre interne">Test 03</span>
+						</div>
+						<input type="text" class="form-control" value=2.66 name="X386" id="X386">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : CpK Diamètre interne">Test 04</span>
+						</div>
+						<input type="text" class="form-control" value=2.6 name="X545" id="X545">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-403E-0,97-1,05-S1-|GASKET-P-403E-7,40-1,00-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Total fatty acids">Test 05</span>
+						</div>
+						<input type="text" class="form-control" value=10.795 name="X249" id="X249">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="LOWER_STEM-DF30--RCS-QD00-NATU-PBT--|VALVE-DF31-50---PRE1 A-- : H">Test 06</span>
+						</div>
+						<input type="text" class="form-control" value=16.2714 name="X272" id="X272">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="RESIN-VALOX HX312C-1H1001-|LOWER_STEM-DF30--RCS-QD00-NATU-PBT--|VALVE-DF31-50---PRE1 A-- : MVR - Aptar">Test 07</span>
+						</div>
+						<input type="text" class="form-control" value=33.29 name="X516" id="X516">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-403E-1,40-1,60-S1-|GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Total fatty acids">Test 08</span>
+						</div>
+						<input type="text" class="form-control" value=10.7725 name="X536" id="X536">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="ADDITIVE-SATINTONE W/WHITETEX--BASF-|MIX-P-NBR-403E-C6_2-|STRIP-P-NBR-403E-0,97-1,05-S1-|GASKET-P-403E-7,40-1,00-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Al du rapport">Test 09</span>
+						</div>
+						<input type="text" class="form-control" value=24.6 name="X568" id="X568">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-403E-1,40-1,60-S1-|GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Total semi-volatile extractables">Test 10</span>
+						</div>
+						<input type="text" class="form-control" value=3.28 name="X526" id="X526">
+					</div>
+
+				</div>	
+
+				<div class="col-2 text-center" id="left">
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-403E-1,40-1,60-S1-|GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Moyenne Contrainte Ã  100%">Test 11</span>
+						</div>
+						<input type="text" class="form-control" value=3.4796 name="X233" id="X233">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-403E-1,40-1,60-S1-|GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Contrainte Ã  100%">Test 12</span>
+						</div>
+						<input type="text" class="form-control" value=3.478 name="X567" id="X567">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-404E-0,55-0,65-S1-|GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Moyenne Contrainte Ã  100%">Test 13</span>
+						</div>
+						<input type="text" class="form-control" value=6.5824 name="X384" id="X384">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-404E-0,55-0,65-S1-|GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Contrainte Ã  100%">Test 14</span>
+						</div>
+						<input type="text" class="form-control" value=6.5857 name="X308" id="X308">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="STRIP-P-NBR-404E-0,55-0,65-S1-|GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Contrainte Ã  la rupture">Test 15</span>
+						</div>
+						<input type="text" class="form-control" value=16.1384 name="X513" id="X513">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="ADDITIVE-SATINTONE W/WHITETEX--BASF-|MIX-P-NBR-403E-C6_2-|STRIP-P-NBR-403E-1,40-1,60-S1-|GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Si">Test 16</span>
+						</div>
+						<input type="text" class="form-control" value=48.9 name="X93" id="X93">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="ADDITIVE-ULTRASIL VN3 GR--EVONIK-|MIX-P-NBR-403E-C6_2-|STRIP-P-NBR-403E-1,40-1,60-S1-|GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Si">Test 17</span>
+						</div>
+						<input type="text" class="form-control" value=97.6 name="X376" id="X376">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="ADDITIVE-SATINTONE W/WHITETEX--BASF-|MIX-P-NBR-404E-C6-|STRIP-P-NBR-404E-0,55-0,65-S1-|GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : O du rapport">Test 18</span>
+						</div>
+						<input type="text" class="form-control" value=47.55 name="X7" id="X7">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="ADDITIVE-SATINTONE W/WHITETEX--BASF-|MIX-P-NBR-404E-C6-|STRIP-P-NBR-404E-0,55-0,65-S1-|GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Fe">Test 19</span>
+						</div>
+						<input type="text" class="form-control" value=1.0 name="X559" id="X559">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="ADDITIVE-KRONOS 1171--KRONOS-|MIX-P-NBR-404E-C6-|STRIP-P-NBR-404E-0,55-0,65-S1-|GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : Ratio">Test 20</span>
+						</div>
+						<input type="text" class="form-control" value=69.6 name="X431" id="X431">
+					</div>
+				</div>
+
+				<div class="col-1" id="left"></div>
+
+				<div class="col-4 text-center" id="left">
+					<img class="img" src="{{ url_for('static',filename='img/AI.jpg') }}" height="500" width="100" id='camera'>
+				</div>
+
+				<div class="col-2" id="left"></div>
+
+				<div class="col-2" id="right">
+					<!--onclick='document.location.reload(false)'-->	
+					
+						<button id='btnPredict' class='btn btn-info btn-lg ' name="makePrediction" style="width: 110px" >PREDICT</button>
+		
+					<div></div><div></div>
+                </div>
+
+                <div class="col-1" id="right"></div>
+                
+                <div class="col-1" id="right">
+                    <img class="img" src="{{ showResult }}" height="80" width="10" id='camera'>
+                </div>
+
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</html>
+{% endblock %}

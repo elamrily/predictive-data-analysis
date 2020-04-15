@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="icon" type="image/png" href="{{ url_for('static',filename='img/valve.png') }}" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">	
+	</head>
+
+{% block content %}
+<body>
+	
+	<div class="wrapper">
+		<div id="rowBanner">
+			
+			<div class="banner d-flex justify-content-between">
+				<a href="/">
+					<input type='image' class="logo" href="/" src="{{ url_for('static',filename='img/Aptar.png') }}" alt="">
+				</a>
+
+				<h1 class="text-center">Let's predict the side streaming max</h1>
+				
+			</div>
+		</div>
+		
+		<form  method="POST" action="{{url_for('prediction')}}">
+
+			<div class="row">
+				<div class="col-1" id="left"></div>
+				
+				<div class="col-3 text-center" id="left">
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="VALVE-DF31-50---PRE1 A-- : Moy Concentration">Test 01</span>
+						</div>
+
+						<input type="range" min=0.2 max=1 step="0.01" value=0.469 name="Xtest1" id="Xtest1"><span id="Stest1"></span>
+
+						<script>
+							var slider1 = document.getElementById("Xtest1");
+							var output1 = document.getElementById("Stest1");
+							output1.innerHTML = slider1.value;
+							
+							slider1.oninput = function() {
+								output1.innerHTML = this.value;
+							}
+
+							function myFunction() {
+							var x = document.getElementById("Xtest1").value;
+							}
+						</script>
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="SPRING-DF30-DF60-RETURN-INOX---|VALVE-DF31-50---PRE1 A--: B11 - Charge P1">Test 02</span>
+						</div>
+
+						<input type="range" min=1400 max=1600 step="0.1" value=1474.26 name="Xtest2" id="Xtest2"><span id="Stest2"></span>
+
+						<script>
+							var slider2 = document.getElementById("Xtest2");
+							var output2 = document.getElementById("Stest2");
+							output2.innerHTML = slider2.value;
+							
+							slider2.oninput = function() {
+								output2.innerHTML = this.value;
+							}
+						</script>
+
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="SPRING-DF30-DF60-RETURN-INOX---|VALVE-DF31-50---PRE1 A-- : B12 - Charge P1">Test 03</span>
+						</div>
+
+						<input type="range" min=2550 max=2850 step="0.1" value=2761.67 name="Xtest3" id="Xtest3"><span id="Stest3"></span>
+
+						<script>
+							var slider3 = document.getElementById("Xtest3");
+							var output3 = document.getElementById("Stest3");
+							output3.innerHTML = slider3.value;
+							
+							slider3.oninput = function() {
+								output3.innerHTML = this.value;
+							}
+						</script>
+
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="SPRING-DF30-DF60-RETURN-INOX---|VALVE-DF31-50---PRE1 A-- : D02 - Ø ext spires - extrême">Test 04</span>
+						</div>
+
+						<input type="range" min=4 max=5 step="0.01" value=4.65 name="Xtest4" id="Xtest4"><span id="Stest4"></span>
+
+						<script>
+							var slider4 = document.getElementById("Xtest4");
+							var output4 = document.getElementById("Stest4");
+							output4.innerHTML = slider4.value;
+							
+							slider4.oninput = function() {
+								output4.innerHTML = this.value;
+							}
+						</script>
+
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A--: CpK Diamètre interne">Test 05</span>
+						</div>
+
+						<input type="range" min=0 max=4.0 step="0.01" value=1.74 name="Xtest5" id="Xtest5"><span id="Stest5"></span>
+
+						<script>
+							var slider5 = document.getElementById("Xtest5");
+							var output5 = document.getElementById("Stest5");
+							output5.innerHTML = slider5.value;
+							
+							slider5.oninput = function() {
+								output5.innerHTML = this.value;
+							}
+						</script>
+
+					</div>
+				</div>	
+
+				<div class="col-3 text-center" id="left">
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-403E-7,40-1,00-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : CpK Diamètre interne">Test 06</span>
+						</div>
+
+						<input type="range" min=0 max=4 step="0.01" value=1.02 name="Xtest6" id="Xtest6"><span id="Stest6"></span>
+
+						<script>
+							var slider9 = document.getElementById("Xtest6");
+							var output9 = document.getElementById("Stest6");
+							output9.innerHTML = slider9.value;
+							
+							slider9.oninput = function() {
+								output9.innerHTML = this.value;
+							}
+						</script>
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : CpK Diamètre externe">Test 07</span>
+						</div>
+
+						<input type="range" min=0 max=4 step="0.01" value=2.74 name="Xtest7" id="Xtest7"><span id="Stest7"></span>
+
+						<script>
+							var slider7 = document.getElementById("Xtest7");
+							var output7 = document.getElementById("Stest7");
+							output7.innerHTML = slider7.value;
+							
+							slider7.oninput = function() {
+								output7.innerHTML = this.value;
+							}
+						</script>
+
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-403E-7,40-1,00-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : CpK Diamètre externe">Test 08</span>
+						</div>
+	
+						<input type="range" min=0 max=4 step="0.01" value=2.6 name="Xtest8" id="Xtest8"><span id="Stest8"></span>
+	
+						<script>
+							var slider10 = document.getElementById("Xtest8");
+							var output10 = document.getElementById("Stest8");
+							output10.innerHTML = slider10.value;
+							
+							slider10.oninput = function() {
+								output10.innerHTML = this.value;
+							}
+						</script>
+	
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-404E-7,25-0,60-W1-S1-RND-|VALVE-DF31-50---PRE1 A--: CpK Diamètre interne">Test 09</span>
+						</div>
+
+						<input type="range" min=0 max=4 step="0.01" value=3.18 name="Xtest9" id="Xtest9"><span id="Stest9"></span>
+
+						<script>
+							var slider8 = document.getElementById("Xtest9");
+							var output8 = document.getElementById("Stest9");
+							output8.innerHTML = slider8.value;
+							
+							slider8.oninput = function() {
+								output8.innerHTML = this.value;
+							}
+						</script>
+
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1" title="GASKET-P-403E-19,40-1,50-W1-S1-RND-|VALVE-DF31-50---PRE1 A-- : CpK Diamètre externe">Test 10</span>
+						</div>
+
+						<input type="range" min=0 max=4 step="0.01" value=1.89 name="Xtest10" id="Xtest10"><span id="Stest10"></span>
+
+						<script>
+							var slider11 = document.getElementById("Xtest10");
+							var output11 = document.getElementById("Stest10");
+							output11.innerHTML = slider11.value;
+							
+							slider11.oninput = function() {
+								output11.innerHTML = this.value;
+							}
+						</script>
+
+					</div>
+
+				</div>
+
+
+				<div class="col-4 text-center" id="left">
+					<img class="img" src="{{ url_for('static',filename='img/AI.jpg') }}" height="500" width="100" id='camera'>
+				</div>
+
+				<div class="col-2" id="left"></div>
+
+				<div class="col-2" id="right">
+					<!--onclick='document.location.reload(false)'-->	
+					
+						<button id='btnPredict' class='btn btn-info btn-lg ' name="makePrediction" style="width: 110px" >PREDICT</button>
+		
+					<div></div><div></div>
+				</div>
+
+				<div class="col-1" id="right"></div>
+                
+                <div class="col-1" id="right">
+                    <img class="img" src="{{ showResult }}" height="80" width="10" id='camera'>
+                </div>
+				
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</html>
+{% endblock %}

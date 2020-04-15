@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="icon" type="image/png" href="{{ url_for('static',filename='img/valve.png') }}" />
+		<meta charset="UTF-8">
+		<meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+		<!-- <meta http-equiv="refresh" content="1;URL=plot"> -->
+
+	</head>
+
+{% block content %}
+<body>
+	<!-- <div class="background">
+		<img class="" src="{{ url_for('static',filename='img/background_home.svg') }}" alt="">
+	</div> -->
+	
+
+	<div class="wrapper">
+		<div id="rowBanner">
+			<div class="banner d-flex justify-content-between">
+				<a href="/">
+					<input type='image' class="logo" href="/" src="{{ url_for('static',filename='img/Aptar.png') }}" alt="">
+				</a>
+				<h5 class="display-5 text-black" src="{{ title }}">{{ title }}</h5>
+			</div>
+		</div>
+
+		<div class="row">
+	
+			<div class="col-4 text-black" id="left">
+				<pre class="display-5 text-black" src="{{ statistics }}" height="500" width="100" id='camera'> "{{ statistics }}" </pre>
+			</div>
+
+			<div class="col-4 text-center" id="left">
+				<img class="img" src="{{ distribution }}" height="400" width="100" id='plot'>
+			</div>
+
+			<div class="col-4 text-center" id="left">
+				<img class="img" src="{{ scatterplot }}" height="400" width="100" id='plot'>
+			</div>
+
+			<div class="col-9 text-center" id="left">
+			</div>
+				
+			<div class="col-3 text-center buttons" id="right">
+				 <!--onclick='document.location.reload(false)'-->	
+				 <div class="form-group">
+				</div>
+
+				<form  method="POST" action="{{url_for('getInformations')}}">
+					<button id='btnRefresh' class='btn btn-info btn-lg ' name="getInfos" style="width: 300px">SELECT MATERIAL CODE</button>
+				</form>
+
+			</div>	
+		</div>
+	</div>
+
+</body>
+</html>
+{% endblock %}
