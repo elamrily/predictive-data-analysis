@@ -1,7 +1,7 @@
 # DATA Analysis VALVE DF31
 By Ilyas Elamri (https://www.linkedin.com/in/ilyas-elamri-0548b4a3/)
 
-<p align="center"><img src="/Valve-DF31/img/valve.png" alt="drawing" width="300" height="300"/></p>
+<p align="center"><img src="/img/valve.png" alt="drawing" width="300" height="300"/></p>
 
 ## Introduction
 
@@ -55,7 +55,7 @@ The dataset in our possession is built from the genealogy between each batch of 
 A serious problem in mining our database is that they are incomplete, and a significant amount of data is missing, or erroneously entered. 
 The graph bellow shows the initial distribution of the missing values for each variable of our dataset.
 
-<p align="center"><img src="/Valve-DF31/img/missingValues1.png" alt="drawing"/></p>
+<p align="center"><img src="/img/missingValues1.png" alt="drawing"/></p>
 
 <table align="center">
 	<tr><th>Rate of missing values</th><th>Size of elements</th><th>Size of variables</th>
@@ -75,7 +75,7 @@ The graph bellow shows the initial distribution of the missing values for each v
 
 Bellow the new distribution of missing values:
 
-<p align="center"><img src="/Valve-DF31/img/missingValues2.png" alt="drawing" width="600" height="400"/></p>
+<p align="center"><img src="/img/missingValues2.png" alt="drawing" width="600" height="400"/></p>
 
 <table align="center">
 	<tr><th>Rate of missing values</th><th>Size of elements</th><th>Size of variables</th></tr>
@@ -87,7 +87,7 @@ Bellow the new distribution of missing values:
 - Delete tests that have zero variance.
 	- Number of deleted tests: 95
 
-<p align="center"><img src="/Valve-DF31/img/missingValues3.png" alt="drawing" width="500" height="400"/></p>
+<p align="center"><img src="/img/missingValues3.png" alt="drawing" width="500" height="400"/></p>
 
 <table align="center">
 	<tr><th>Rate of missing values</th><th>Size of elements</th><th>Size of variables</th></tr>
@@ -108,23 +108,23 @@ Bellow the new distribution of missing values:
 - Number of batches with side streaming max at 0: 196
 - Number of batches with a side streaming max different than 0: 76
  
-<p align="center"><img src="/Valve-DF31/img/distribution.png" alt="drawing" width="600" height="250"/></p>
+<p align="center"><img src="/img/distribution.png" alt="drawing" width="600" height="250"/></p>
 
 
 we binarize the values of the max side streaming in order to obtain a dataset ready for a binary classification. Bellow the distribution of the two classes of the side streaming max.
 - label 0: no side streaming
 - label 1: side streaming different from null
 
-<p align="center"><img src="/Valve-DF31/img/repartition.png" alt="drawing" width="250" height="250"/></p>
+<p align="center"><img src="/img/repartition.png" alt="drawing" width="250" height="250"/></p>
 
 
 ## V. Data visualization
 
 Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables (entities each of which takes on various numerical values) into a set of values of linearly uncorrelated variables called principal components. This transformation is defined in such a way that the first principal component has the largest possible variance (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. The resulting vectors (each being a linear combination of the variables and containing n observations) are an uncorrelated orthogonal basis set. PCA is sensitive to the relative scaling of the original variables.
 
-<p align="center"><img src="/Valve-DF31/img/pca.png" alt="drawing" width="600" height="400"/></p>
+<p align="center"><img src="/img/pca.png" alt="drawing" width="600" height="400"/></p>
 
-<p align="center"><img src="/Valve-DF31/img/pca3D.png" alt="drawing" width="600" height="400"/></p>
+<p align="center"><img src="/img/pca3D.png" alt="drawing" width="600" height="400"/></p>
 
 ## VI. Oversampling
 
@@ -137,10 +137,10 @@ Perhaps the most widely used approach to synthesizing new examples is called the
 SMOTE works by selecting examples that are close in the feature space, drawing a line between the examples in the feature space and drawing a new sample at a point along that line.
 Specifically, a random example from the minority class is first chosen. Then k of the nearest neighbors for that example are found (typically k=5). A randomly selected neighbor is chosen, and a synthetic example is created at a randomly selected point between the two examples in feature space.
 
-<p align="center"><img src="/Valve-DF31/img/dataAugmentation.png" alt="drawing" width="600" height="400"/></p>
+<p align="center"><img src="/img/dataAugmentation.png" alt="drawing" width="600" height="400"/></p>
 
 
-<p align="center"><img src="/Valve-DF31/img/dataAugmentation3D.png" alt="drawing" width="600" height="400"/></p>
+<p align="center"><img src="/img/dataAugmentation3D.png" alt="drawing" width="600" height="400"/></p>
 
 
 ## VII. Most impacting attributes
@@ -150,14 +150,14 @@ Specifically, a random example from the minority class is first chosen. Then k o
 The point biserial correlation coefficient (rpb) is a correlation coefficient used when one variable (e.g. Y) is dichotomous; Y can either be "naturally" dichotomous, like whether a coin lands heads or tails, or an artificially dichotomized variable. In most situations it is not advisable to dichotomize variables artificially. When a new variable is artificially dichotomized the new dichotomous variable may be conceptualized as having an underlying continuity. If this is the case, a biserial correlation would be the more appropriate calculation.
 The point-biserial correlation is mathematically equivalent to the Pearson (product moment) correlation, that is, if we have one continuously measured variable X and a dichotomous variable Y, rXY = rpb. This can be shown by assigning two distinct numerical values to the dichotomous variable.
 
-<p align="center"><img src="/Valve-DF31/img/correlation.png" alt="drawing" width="700" height="350"/></p>
+<p align="center"><img src="/img/correlation.png" alt="drawing" width="700" height="350"/></p>
 
  
 •	Top positive correlations:
-<p align="center"><img src="/Valve-DF31/img/positiveCorrelation.png" alt="drawing" width="600" height="300"/></p>
+<p align="center"><img src="/img/positiveCorrelation.png" alt="drawing" width="600" height="300"/></p>
 
 •	Top negative correlations:
-<p align="center"><img src="/Valve-DF31/img/negativeCorrelation.png" alt="drawing" width="600" height="300"/></p>
+<p align="center"><img src="/img/negativeCorrelation.png" alt="drawing" width="600" height="300"/></p>
 
  
 
@@ -167,29 +167,29 @@ Embedded methods are iterative in a sense that takes care of each iteration of t
 
 Here we will do feature selection using Lasso regularization. If the feature is irrelevant, lasso penalizes its coefficient and make it 0. Hence the features with coefficient = 0 are removed and the rest are taken.
 
-<p align="center"><img src="/Valve-DF31/img/lasso.png" alt="drawing" width="350" height="100"/></p>
+<p align="center"><img src="/img/lasso.png" alt="drawing" width="350" height="100"/></p>
 
 #### 3. Gini importance
 
 The importance of the characteristics is calculated as the decrease in the impurity of the node weighted by the probability of reaching this node. The probability of the node can be calculated by the number of samples reaching the node, divided by the total number of samples.
 
-<p align="center"><img src="/Valve-DF31/img/gini.png" alt="drawing" width="600" height="250"/></p> 
+<p align="center"><img src="/img/gini.png" alt="drawing" width="600" height="250"/></p> 
 
 #### 4. Density of each class for each selected variable 
 
 The following table contains the selected variables to train our statistical model for prediction.
 
-<p align="center"><img src="/Valve-DF31/img/selected.png" alt="drawing" width="600" height="200"/></p>
+<p align="center"><img src="/img/selected.png" alt="drawing" width="600" height="200"/></p>
 
 <div class='row'>
-	<img src="/Valve-DF31/img/b11.png" alt="drawing" width="300" height="200"/>
-	<img src="/Valve-DF31/img/b12.png" alt="drawing" width="300" height="200"/>
-	<img src="/Valve-DF31/img/conc.png" alt="drawing" width="200" height="200"/>
-	<img src="/Valve-DF31/img/diametre1.png" alt="drawing" width="300" height="200"/>
-	<img src="/Valve-DF31/img/diametre2.png" alt="drawing" width="300" height="200"/>
-	<img src="/Valve-DF31/img/std.png" alt="drawing" width="200" height="200"/>
+	<img src="/img/b11.png" alt="drawing" width="300" height="200"/>
+	<img src="/img/b12.png" alt="drawing" width="300" height="200"/>
+	<img src="/img/conc.png" alt="drawing" width="200" height="200"/>
+	<img src="/img/diametre1.png" alt="drawing" width="300" height="200"/>
+	<img src="/img/diametre2.png" alt="drawing" width="300" height="200"/>
+	<img src="/img/std.png" alt="drawing" width="200" height="200"/>
 </div>
-<p align="center"><img src="/Valve-DF31/img/allongement.png" alt="drawing" width="430" height="200"/></p>
+<p align="center"><img src="/img/allongement.png" alt="drawing" width="430" height="200"/></p>
 
 ## VIII. Prediction
 
@@ -201,19 +201,19 @@ SVMs were developed in the 1990s, their principle is simple: their purpose is to
 ###### Linear classification problem
 For a linear classification problem we assume that the two classes are separable by a hyperplane, the function f therefore has the form:
 
-<p align="center"><img src="/Valve-DF31/img/math.png" alt="drawing" width="300" height="75"/></p>
+<p align="center"><img src="/img/math.png" alt="drawing" width="300" height="75"/></p>
 
 where w is the vector orthogonal to the hyperplane and b is the displacement compared to the origin.
 
-<p align="center"><img src="/Valve-DF31/img/svm.png" alt="drawing" width="600" height="400"/></p>
+<p align="center"><img src="/img/svm.png" alt="drawing" width="600" height="400"/></p>
 
 To judge the quality of a hyperplane as a separator, we use the distance between the training examples and this separator. More specifically, the "margin" of a learning problem is defined as the distance between the closest learning example and the separation hyperplane. For a hyperplane H we have:
 
-<p align="center"><img src="/Valve-DF31/img/marge.png" alt="drawing" width="200" height="50"/></p>
+<p align="center"><img src="/img/marge.png" alt="drawing" width="200" height="50"/></p>
 
 We thus arrive at the following optimization problem (called primal problem):
 
-<p align="center"><img src="/Valve-DF31/img/primal.png" alt="drawing" width="300" height="85"/></p>
+<p align="center"><img src="/img/primal.png" alt="drawing" width="300" height="85"/></p>
 
 ###### Non linear classification problem
 Often it happens that even if the problem is linear, the data is affected by noise (eg from sensor) and the two classes are mixed around the separation hyperplane. To manage this type of problem we use a technique called flexible margin, which tolerates bad rankings:
@@ -221,11 +221,11 @@ Often it happens that even if the problem is linear, the data is affected by noi
 - Add stress relaxation variables ξi
 - Penalize these lapses in the objective function.
 
-<p align="center"><img src="/Valve-DF31/img/separation.png" alt="drawing"/></p>
+<p align="center"><img src="/img/separation.png" alt="drawing"/></p>
 
 The optimization problem in the case of non-separable data is therefore:
 
-<p align="center"><img src="/Valve-DF31/img/dual.png" alt="drawing" width="300" height="150"/></p>
+<p align="center"><img src="/img/dual.png" alt="drawing" width="300" height="150"/></p>
 
 C It is a variable for penalizing badly classified points making a compromise between the width of the margin and badly classified points. The variables ξi are also called spring variables
 
@@ -255,7 +255,7 @@ We use a 5 cross validation to analyze the performance of our model. For each fo
 
 #### 4. Metrics
 
-<p align="center"><img src="/Valve-DF31/img/metrics.png" alt="drawing" width="600" height="350"/></p>
+<p align="center"><img src="/img/metrics.png" alt="drawing" width="600" height="350"/></p>
 
 - True positive: Batches with no side streaming correctly identified as batches with no side streaming 
 - False positive: Batches with side streaming incorrectly identified as batches with no side streaming 
@@ -288,11 +288,11 @@ We fit our model with the training sub dataset, and we test on the test sub data
 Prediction score: 93 %
 
 #### 6. Confusion matrix
-<p align="center"><img src="/Valve-DF31/img/confusion.png" alt="drawing"/></p>
+<p align="center"><img src="/img/confusion.png" alt="drawing"/></p>
 
 
 #### 7. Classification report
-<p align="center"><img src="/Valve-DF31/img/report.png" alt="drawing"  width="400" height="150"/></p>
+<p align="center"><img src="/img/report.png" alt="drawing"  width="400" height="150"/></p>
 
 
 #### 8. ROC curve (receiver operating characteristic)
@@ -300,7 +300,7 @@ A receiver operating characteristic curve, or ROC curve, is a graphical plot tha
 
 The ROC curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. The true-positive rate is also known as sensitivity, recall or probability of detection in machine learning. The false-positive rate is also known as probability of false alarm and can be calculated as (1 − specificity). It can also be thought of as a plot of the power as a function of the Type I Error of the decision rule (when the performance is calculated from just a sample of the population, it can be thought of as estimators of these quantities). The ROC curve is thus the sensitivity as a function of fall-out. In general, if the probability distributions for both detection and false alarm are known, the ROC curve can be generated by plotting the cumulative distribution function (area under the probability distribution from −∞ to the discrimination threshold) of the detection probability in the y-axis versus the cumulative distribution function of the false-alarm probability on the x-axis.
 
-<p align="center"><img src="/Valve-DF31/img/roc.png" alt="drawing" width="300" height="400"/></p>
+<p align="center"><img src="/img/roc.png" alt="drawing" width="300" height="400"/></p>
 
 #### 9. Decision boundary
 
@@ -309,26 +309,26 @@ The ROC curve is created by plotting the true positive rate (TPR) against the fa
 - Blue area represents the side streaming 0
 
 <div class='row'>
-	<img src="/Valve-DF31/img/b11_allongement.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/b12Allongement.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/conc_allongement.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/diametre1_allongement.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/diametre2_allongement.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/std_allongement.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/b11_b12.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/conc_b12.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/diametre1_b12.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/diametre2_b12.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/std_b12.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/conc_b11.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/diametre1_b11.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/diametre2_b11.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/std_b11.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/conc_diametre1.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/conc_diametre2.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/std_conc.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/diametre1_diametre2.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/std_diametre1.png" alt="drawing" width="400" height="350"/>
-	<img src="/Valve-DF31/img/std_diametre2.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/b11_allongement.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/b12Allongement.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/conc_allongement.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/diametre1_allongement.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/diametre2_allongement.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/std_allongement.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/b11_b12.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/conc_b12.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/diametre1_b12.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/diametre2_b12.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/std_b12.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/conc_b11.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/diametre1_b11.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/diametre2_b11.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/std_b11.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/conc_diametre1.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/conc_diametre2.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/std_conc.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/diametre1_diametre2.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/std_diametre1.png" alt="drawing" width="400" height="350"/>
+	<img src="/img/std_diametre2.png" alt="drawing" width="400" height="350"/>
 
 </div>
