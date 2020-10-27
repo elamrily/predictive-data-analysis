@@ -36,7 +36,7 @@ conda-package-handling==1.6.0
 conda-verify==3.1.1
 contextlib2==0.5.5
 crypto==1.4.1
-cryptography==2.6.1
+cryptography==3.2
 CVXcanon==0.1.1
 cvxpy==1.0.21
 cycler==0.10.0
