@@ -104,7 +104,7 @@ lesscpy==0.13.0
 libarchive-c==2.8
 llvmlite==0.28.0
 locket==0.2.0
-lxml==4.3.0
+lxml==4.9.1
 macholib==1.11
 Markdown==3.0.1
 MarkupSafe==1.1.1
